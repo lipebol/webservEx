@@ -1,9 +1,6 @@
 package dev.lipebol.webservEx_REST.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,21 +15,16 @@ import dev.lipebol.webservEx_REST.services.Service_Tracks;
 public class SpotifEx_Tracks {
 	
 	@Autowired
-	private Service_Tracks tracks;
-	
-	@GetMapping
-	public List<Model_Tracks>  allTracks(){
-		return tracks.getAll();
-	}
+	private Service_Tracks s_tracks;
 	
 	@PostMapping
 	public Model_Tracks create(@RequestBody Model_Tracks track) {
-		return tracks.create(track);
+		return s_tracks.create(track);
 	}
 	
 	@PutMapping
 	public Model_Tracks update(@RequestBody Model_Tracks track) {
-		return tracks.update(track);
+		return s_tracks.update(track);
 	}
 
 }
