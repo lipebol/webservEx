@@ -13,12 +13,6 @@ public class Model_Genres {
 	private String name;
 	private String url;
 	
-	public Model_Genres(String _id, String name, String url) {
-		super();
-		this._id = _id;
-		this.name = name;
-		this.url = url;
-	}
 	
 	public String get_id() {
 		return _id;
@@ -36,9 +30,11 @@ public class Model_Genres {
 		this.name = name;
 	}
 	
+	
 	public String getUrl() {
 		return url;
 	}
+	
 	
 	public void setUrl(String url) {
 		this.url = url;
@@ -49,6 +45,7 @@ public class Model_Genres {
 	public int hashCode() {
 		return Objects.hash(_id);
 	}
+	
 	
 	@Override
 	public boolean equals(Object obj) {

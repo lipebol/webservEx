@@ -1,6 +1,5 @@
 package dev.lipebol.webservEx_REST.models;
 
-
 import java.util.Map;
 import java.util.Objects;
 
