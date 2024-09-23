@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  webservex-graphql:
+    build:
+      context: ./${WEBSERVEX_GRAPHQL}
+      dockerfile: Dockerfile
+    image: webservex-graphql
+    container_name: ${WEBSERVEX_GRAPHQL}
+    restart: unless-stopped
+    env_file: .env
+    networks:
+      - webservEx-network
+
+  webservex-reverse:
+    build:
+      context: ./${WEBSERVEX_REVERSE}
+      dockerfile: Dockerfile
+    image: webservex-reverse
+    container_name: ${WEBSERVEX_REVERSE}
+    env_file: .env
+    restart: always
+    ports:
+      - ${WEBSERVEX_REVERSE_PORT}:${WEBSERVEX_REVERSE_PORT}
+    depends_on:
+      - webservex-graphql
+    networks:
+      - webservEx-network
+
+networks:
+  webservEx-network:
+    driver: bridge 
