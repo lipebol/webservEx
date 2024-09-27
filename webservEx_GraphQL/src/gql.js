@@ -1,8 +1,8 @@
 const router = require(process.env.SERVER).Router()
 const { createHandler } = require(process.env.GRAPHQL_HTTP)
 const GraphiQL = require(process.env.GRAPHIQL).default
-const { schemas } = require(process.env.GRAPHQL_SCHEMAS)
-const { resolvers } = require(process.env.GRAPHQL_RESOLVERS)
+const { schemas } = require(process.env.SCHEMAS_GRAPHQL)
+const { resolvers } = require(process.env.RESOLVERS_GRAPHQL)
 
 
 router.all(process.env.SLASH, createHandler({ 
