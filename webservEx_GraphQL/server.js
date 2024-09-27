@@ -2,7 +2,7 @@ require('dotenv').config()
 const cors = require(process.env.CORS)
 const Express = require(process.env.SERVER)
 const helmet = require(process.env.HELMET)
-const graphql = require(process.env.GRAPHQL_MAIN)
+const gql = require(process.env.GQL)
 
 const Server = Express()
 
@@ -18,7 +18,7 @@ Server.use(
 )
 
 
-Server.use(process.env.ROUTE_GRAPHQL, graphql)
+Server.use(process.env.ROUTE_GRAPHQL, gql)
 
 Server.use(
     (req, res) => {
