@@ -14,10 +14,10 @@ const schemas = buildSchema(`
         artUrl: String
         album: String
         artist: String
-        autoRating: Float
+        autoRating: String
         discNumber: String
         title: String
-        trackNumber: Int
+        trackNumber: String
         url: String
         genres: [GENRES]
     }
