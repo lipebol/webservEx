@@ -1,6 +1,5 @@
 package dev.lipebol.webservEx_REST.models;
 
-import java.util.Map;
 import java.util.Objects;
 
 import org.springframework.data.annotation.Id;
@@ -16,12 +15,12 @@ public class Model_Tracks {
 	private String artUrl;
 	private String album;
 	private String artist;
-	private Float autoRating;
+	private String autoRating;
 	private String discNumber;
 	private String title;
-	private Integer trackNumber;
+	private String trackNumber;
 	private String url;
-	private Map<String, String> genres;
+	private String[] genres;
 	
 	
 	public String get_id() {
@@ -72,11 +71,11 @@ public class Model_Tracks {
 		this.artist = artist;
 	}
 	
-	public Float getAutoRating() {
+	public String getAutoRating() {
 		return autoRating;
 	}
 	
-	public void setAutoRating(Float autoRating) {
+	public void setAutoRating(String autoRating) {
 		this.autoRating = autoRating;
 	}
 	
@@ -96,11 +95,11 @@ public class Model_Tracks {
 		this.title = title;
 	}
 	
-	public Integer getTrackNumber() {
+	public String getTrackNumber() {
 		return trackNumber;
 	}
 	
-	public void setTrackNumber(Integer trackNumber) {
+	public void setTrackNumber(String trackNumber) {
 		this.trackNumber = trackNumber;
 	}
 	
@@ -112,11 +111,12 @@ public class Model_Tracks {
 		this.url = url;
 	}
 
-	public Map<String, String> getGenres() {
+
+	public String[] getGenres() {
 		return genres;
 	}
 
-	public void setGenres(Map<String, String> genres) {
+	public void setGenres(String[] genres) {
 		this.genres = genres;
 	}
 
