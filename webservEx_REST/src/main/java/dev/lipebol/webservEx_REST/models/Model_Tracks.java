@@ -20,7 +20,6 @@ public class Model_Tracks {
 	private String title;
 	private String trackNumber;
 	private String url;
-	private String[] genres;
 	
 	
 	public String get_id() {
@@ -110,15 +109,7 @@ public class Model_Tracks {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-
-
-	public String[] getGenres() {
-		return genres;
-	}
-
-	public void setGenres(String[] genres) {
-		this.genres = genres;
-	}
+	
 
 	@Override
 	public int hashCode() {
