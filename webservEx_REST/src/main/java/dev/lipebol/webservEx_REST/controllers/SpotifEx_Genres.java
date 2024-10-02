@@ -1,6 +1,5 @@
 package dev.lipebol.webservEx_REST.controllers;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import dev.lipebol.webservEx_REST.models.Model_Genres;
 import dev.lipebol.webservEx_REST.services.Service_Genres;
-
 
 
 @RestController
@@ -48,9 +46,7 @@ public class SpotifEx_Genres {
 	@DeleteMapping
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	public Map<String, String> notDelete() {
-		Map<String, String> map = new HashMap<>();
-		map.put("error", "Sorry! Not Found.");
-		return map;
+		return s_genres.notFound();
 	}
 	
 }

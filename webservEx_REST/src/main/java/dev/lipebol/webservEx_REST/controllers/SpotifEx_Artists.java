@@ -1,6 +1,5 @@
 package dev.lipebol.webservEx_REST.controllers;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +26,7 @@ public class SpotifEx_Artists {
 	@GetMapping
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	public Map<String, String> notGet() {
-		Map<String, String> map = new HashMap<>();
-		map.put("error", "Sorry! Not Found.");
-		return map;
+		return s_artists.notFound();
 	}
 	
 	@PostMapping
@@ -47,8 +44,6 @@ public class SpotifEx_Artists {
 	@DeleteMapping
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	public Map<String, String> notDelete() {
-		Map<String, String> map = new HashMap<>();
-		map.put("error", "Sorry! Not Found.");
-		return map;
+		return s_artists.notFound();
 	}
 }
