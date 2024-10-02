@@ -1,5 +1,8 @@
 package dev.lipebol.webservEx_REST.services;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +21,11 @@ public class Service_Artists {
 	
 	public Model_Artists update(Model_Artists artist) {
 		return r_artists.save(artist);
+	}
+	
+	public Map<String, String> notFound() {
+		Map<String, String> map = new HashMap<>();
+		map.put("error", "Sorry! Not Found.");
+		return map;
 	}
 }

@@ -1,6 +1,8 @@
 package dev.lipebol.webservEx_REST.services;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -27,5 +29,11 @@ public class Service_Genres {
 	
 	public Model_Genres update(Model_Genres genre) {
 		return r_genres.save(genre);
+	}
+	
+	public Map<String, String> notFound() {
+		Map<String, String> map = new HashMap<>();
+		map.put("error", "Sorry! Not Found.");
+		return map;
 	}
 }
