@@ -17,7 +17,7 @@ import dev.lipebol.webservEx_REST.models.Model_Playlist;
 import dev.lipebol.webservEx_REST.services.Service_Playlist;
 
 @RestController
-@RequestMapping("/playlist")
+@RequestMapping("/api/spotifex/playlist")
 public class SpotifEx_Playlist {
 
 	@Autowired

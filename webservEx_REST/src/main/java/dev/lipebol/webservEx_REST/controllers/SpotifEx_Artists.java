@@ -17,7 +17,7 @@ import dev.lipebol.webservEx_REST.models.Model_Artists;
 import dev.lipebol.webservEx_REST.services.Service_Artists;
 
 @RestController
-@RequestMapping("/artists")
+@RequestMapping("/api/spotifex/artists")
 public class SpotifEx_Artists {
 
 	@Autowired

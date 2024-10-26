@@ -19,7 +19,7 @@ import dev.lipebol.webservEx_REST.services.Service_Genres;
 
 
 @RestController
-@RequestMapping("/genres")
+@RequestMapping("/api/spotifex/genres")
 public class SpotifEx_Genres {
 	
 	@Autowired

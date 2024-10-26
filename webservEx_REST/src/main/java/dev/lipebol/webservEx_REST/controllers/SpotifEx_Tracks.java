@@ -17,7 +17,7 @@ import dev.lipebol.webservEx_REST.models.Model_Tracks;
 import dev.lipebol.webservEx_REST.services.Service_Tracks;
 
 @RestController
-@RequestMapping("/tracks")
+@RequestMapping("/api/spotifex/tracks")
 public class SpotifEx_Tracks {
 	
 	@Autowired
